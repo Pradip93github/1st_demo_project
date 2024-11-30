@@ -1,0 +1,82 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m"
+xmlns:f="sap.ui.layout.form"
+controllerName="com.rg.sd.sr.controller.Add">
+<Page title="Product Data" >
+<Toolbar>
+<Button type="Back" press="onBack"></Button>
+</Toolbar>
+<VBox class="sapUiSmallMargin">
+<f:SimpleForm
+			id="idFrom"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			title="Product details"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+<Label text="Product Id"></Label>
+<Input value="{prod>/prodData/PRODUCT_ID}" submit="onEnterProdID" id="idProd"></Input>
+<Button id="mostexpProd" text="Get Exp Product" tooltip="Most Expensiv Product" press="getMostExpProd"
+         icon="sap-icon://collections-insight"></Button>
+
+<Label text="Type Code"></Label>
+<Input value="{prod>/prodData/TYPE_CODE}"></Input>
+
+<Label text="Category"></Label>
+<Select selectedKey="{prod>/prodData/CATEGORY}" id="idCatg">
+<core:Item key="Flat Screen Monitors" text="Flat Screen Monitors" />
+<core:Item key="Laser Printers" text="Laser Printers" />
+<core:Item key="Ink Jet Printers" text="Ink Jet Printers" />
+</Select>
+
+
+<Label text="Name"></Label>
+<Input value="{prod>/prodData/NAME}"></Input>
+
+<Label text="Supplier Id"></Label>
+<Input value="{prod>/prodData/SUPPLIER_ID}"></Input>
+
+<Label text="Supplier name"></Label>
+<Input value="{prod>/prodData/SUPPLIER_NAME}"></Input>
+
+<Label text="Tax Tarif code"></Label>
+<Input value="{prod>/prodData/TAX_TARIF_CODE}"></Input>
+
+<!-- <Label text="Weight Measur"></Label>
+<Input value="{prod>/prodData/WEIGHT_MEASURE}"></Input> -->
+
+<Label text="Weight Unit"></Label>
+<Input value="{prod>/prodData/WEIGHT_UNIT}"></Input>
+
+<Label text="Price"></Label>
+<Input value="{prod>/prodData/PRICE}"></Input>
+
+<!-- <Label text="Currency"></Label> -->
+<Input value="{prod>/prodData/CURRENCY_CODE}"></Input>
+
+</f:SimpleForm>
+<Image src="" id="idImage"></Image>
+</VBox >
+
+
+
+<footer>
+<Toolbar >
+<ToolbarSpacer />
+<Button id="idSave" text="Save" type="Accept" icon="sap-icon://save" press="onCreate"></Button>
+<Button id="idDelete" text="Delete" type="Reject" icon="sap-icon://delete" press="onDelete"></Button>
+<Button text="Clear" type="Reject" icon="sap-icon://clear-all" press="onClear"></Button>
+</Toolbar>
+</footer>
+</Page>
+</mvc:View>

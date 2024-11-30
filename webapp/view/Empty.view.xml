@@ -1,0 +1,9 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core"
+          controllerName="com.rg.sd.sr.controller.Empty">
+   <Page >
+   <Image src="https://m.media-amazon.com/images/M/MV5BYTMxODc5MzctNTBhMS00OTYyLTljYWItOGM0NDA1NDRlYTY4XkEyXkFqcGc@._V1_.jpg"
+          width="65em" height="40em">
+   </Image>
+   </Page>
+
+</mvc:View>

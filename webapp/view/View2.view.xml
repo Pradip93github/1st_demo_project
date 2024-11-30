@@ -1,0 +1,60 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m"
+          xmlns:f="sap.ui.layout.form"  
+		  xmlns:t="sap.ui.table" 
+  controllerName="com.rg.sd.sr.controller.view2">
+  <Page>
+       <customHeader>
+			<Toolbar>
+                <Button type="Back" press="onPressBack" />    
+				<Title text="{PRODUCT_ID}-{CATEGORY}" level="H2"/>
+			</Toolbar>
+		</customHeader>
+
+    <content>
+    <ObjectHeader icon="sap-icon://product"  title="{PRODUCT_ID}" intro="{NAME}" 
+                  number="{PRICE}" numberUnit="{CURRENCY_CODE}" imageShape="Circle" >
+	 <statuses>
+	 <ObjectStatus
+				text="{CATEGORY}"
+				state="{path: 'status', formatter:'.formatter.checkState'}" />
+	 </statuses>	
+    </ObjectHeader>
+     
+    	<IconTabBar id="idIconTab">
+	<items>
+
+        <IconTabFilter icon="sap-icon://information" key="info" text="More Info...">
+		  <core:Fragment fragmentName="com.rg.sd.sr.fragments.moreInfo" type="XML"/> 
+		</IconTabFilter>
+
+
+
+		<IconTabFilter icon="sap-icon://supplier" key="Supplier" text="Supplier">
+	    <core:Fragment fragmentName="com.rg.sd.sr.fragments.supplier" type="XML"/>
+		</IconTabFilter>
+
+
+
+		<IconTabFilter icon="sap-icon://map-fill" key="State" text="State">
+        <core:Fragment fragmentName="com.rg.sd.sr.fragments.cities" type="XML"/>
+		</IconTabFilter>
+		
+	</items>
+	</IconTabBar>
+
+    </content>
+
+
+
+    	<footer>
+			<OverflowToolbar>
+				<ToolbarSpacer/>
+				<Button text="SAVE" type="Accept" icon="sap-icon://accept"  press="onSave" />
+                <!-- <Button text="Edit" icon="sap-icon://edit" /> -->
+				<Button text="CANCEL" type="Reject" icon="sap-icon://decline" press="onCancel"/>
+				<!-- <Button text="Delete" icon="sap-icon://delete" /> -->
+			</OverflowToolbar>
+		</footer>
+
+  </Page>
+</mvc:View>

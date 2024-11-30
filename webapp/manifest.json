@@ -1,0 +1,143 @@
+{
+    "_version": "1.45.0",
+    "sap.app": {
+        "id": "com.rg.sd.sr",
+        "type": "application",
+        "ach": "SD-REP-SR",
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "dataSources": {
+            "pradipService":{
+                "type": "OData",
+                "uri": "/sap/opu/odata/sap/ZEPM_PRODUCT_SUPPLIER_SRV/",
+                "settings": {
+                    "odataVersion": "2.0"
+                }
+            }
+        },
+
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "i18n": "i18n/i18n.properties"
+    },
+    "sap.ui": {
+        "deviceTypes": {
+            "desktop": true,
+            "phone": true,
+            "tablet": true
+        },
+        "supportedThemes": [
+            "sap_fiori_3",
+            "sap_fiori_3_dark"
+        ],
+        "technology": "UI5",
+        "fullWidth": true
+    },
+    "sap.ui5": {
+        "dependencies": {
+            "libs": {
+                "sap.ui.core": {},
+                "sap.m": {},
+                "sap.ui.layout": {}
+            },
+            "minUI5Version": "1.100"
+        },
+        "contentDensities": {
+            "cozy": true,
+            "compact": true
+        },
+        "rootView": {
+            "id": "idRootView",
+            "type": "XML",
+            "viewName": "com.rg.sd.sr.view.App"
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewPath": "com.rg.sd.sr.view",
+                "viewType": "XML",
+                "controlId": "idAppCon"
+            },
+            "routes": [
+                {
+                    "name": "startpage",
+                    "pattern": "",
+                    "target": [
+                        "joe",
+                        "biden"
+                    ]
+                },
+                {
+                    "name": "spiderman",
+                    "pattern": "fruit/{fruitId}",
+                    "target": [
+                        "joe",
+                        "modei"
+                    ]
+                },
+                {
+                    "name": "superman",
+                    "pattern": "supplier/{supplierId}",
+                    "target":["joe","trump"]
+                },
+                {
+                    "name": "add",
+                    "pattern": "addItem",
+                    "target":["joe","additeam"]
+
+                }
+
+            ],
+            "targets": {
+                "joe": {
+                    "viewId": "idView1",
+                    "viewName": "View1",
+                    "controlAggregation": "masterPages"
+                },
+                "biden": {
+                    "viewId": "idEmpty",
+                    "viewName": "Empty",
+                    "controlAggregation": "detailPages"
+                },
+                "modei": {
+                    "viewId": "idView2",
+                    "viewName": "View2",
+                    "controlAggregation": "detailPages"
+                },
+                "trump":{
+                    "viewId": "idView3",
+                    "viewName": "View3",
+                    "controlAggregation": "detailPages"
+                },
+                "additeam":{
+                    "viewId": "idAdd",
+                    "viewName": "Add",
+                    "controlAggregation": "detailPages"
+
+                }
+            }
+        },
+        "models": {
+            "":{
+                "dataSource": "pradipService",
+                "type": "sap.ui.model.odata.v2.ODataModel",
+                "settings": {}
+            },
+
+            "fruit": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "mockdata/fruit.json",
+                "settings": {},
+                "preload": false
+            },
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "preload": true,
+                "settings": {
+                    "bundleUrl": "i18n/i18n.properties"
+                }
+            }
+        }
+    }
+}

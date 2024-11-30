@@ -1,0 +1,43 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m"
+          xmlns:t="sap.ui.table" xmlns:f="sap.ui.layout.form"
+  controllerName="com.rg.sd.sr.controller.view1">
+  <Page title="View1">
+  		<customHeader>
+			<Toolbar>
+				<Title text="View1 loaded" level="H2"/>
+				<ToolbarSpacer/>
+			    <Button icon="sap-icon://action" type="Transparent" press="onPress" 
+                ariaLabelledBy="actionButtonLabel"/>
+			</Toolbar>
+		</customHeader>
+       
+        <SearchField id="IdSearch" placeholder="Looking For search"  search=".search.onSearch"
+                     ></SearchField>
+        <!-- <List id="idListItem" width="50%" items="{/fruits}" mode="Delete" delete="onDeleteItem"> -->
+        <List id="idListItem"  items="{/ZPRODUCTSet}" mode="SingleSelectMaster"  
+        selectionChange="onPressItem" growing="true" growingThreshold="10">
+        <items>
+         <!--type="Navigation"  -->
+           <ObjectListItem  intro="{path: 'NAME'}"  title="{path: 'PRODUCT_ID'}" 
+           	number="{path: 'PRICE'}" numberUnit="{path: 'CURRENCY_CODE'}"
+            icon="sap-icon://supplier" >
+
+           <firstStatus>
+				   <ObjectStatus
+					text="{path: 'NAME'}" state="{path: 'status', formatter:'.formatter.checkState'}"/>
+			   </firstStatus>
+         <!-- <ObjectAttribute text="{path: 'healthBenefit'}"/>  -->
+       
+			<!-- <ObjectAttribute text="{Width} x {Depth} x {Height} {DimUnit}" /> -->
+           </ObjectListItem>           
+         </items>
+        </List>
+         <footer> 
+         <OverflowToolbar>
+         <ToolbarSpacer />
+         <Button text="Add item" icon="sap-icon://add" press="onAddItem"></Button>
+				<Button text="Delete" icon="sap-icon://delete" press="onMultiSelect" />
+			</OverflowToolbar>
+      </footer>
+  </Page>
+</mvc:View> 
