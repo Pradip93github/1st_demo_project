@@ -65,11 +65,11 @@ sap.ui.define(['com/rg/sd/sr/controller/BaseController',
                         that.getView().addDependent(that.callBackObj);
                         // binding data
                         that.callBackObj.bindAggregation("items",{
-                            path: '/suppliers',
+                            path: 'fruit>/suppliers',
                             template : new sap.m.ObjectListItem({
-                               title: '{name}',
-                               intro: '{sinceWhen}',
-                               number: '{contactNo}'
+                               title: '{fruit>name}',
+                               intro: '{fruit>sinceWhen}',
+                               number: '{fruit>contactNo}'
                             }),
                         });
                         that.callBackObj.open();
@@ -104,11 +104,11 @@ sap.ui.define(['com/rg/sd/sr/controller/BaseController',
                         that.getView().addDependent(that.callBackObj1);
                         // binding data
                         that.callBackObj1.bindAggregation("items",{
-                            path: '/cities',
+                            path: 'fruit>/cities',
                             template : new sap.m.ObjectListItem({
-                               title: '{name}',
-                               intro: '{famousFor}',
-                               number: '{otherName}'
+                               title: '{fruit>name}',
+                               intro: '{fruit>famousFor}',
+                               number: '{fruit>otherName}'
                             }),
                         });
                         that.callBackObj1.open();
