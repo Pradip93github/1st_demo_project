@@ -60,7 +60,7 @@ sap.ui.define(['com/rg/sd/sr/controller/BaseController',
       },
 
       onPressItem: function (oEvt) {
-
+        debugger;
         var selectItemPath = oEvt.getParameter("listItem").getBindingContextPath();
 
 

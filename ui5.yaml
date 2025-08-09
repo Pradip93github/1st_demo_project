@@ -1,13 +1,20 @@
-specVersion: '3.0'
+specVersion: "4.0"
 metadata:
-  name: fiorilikeapp
+  name: vendordetails
 type: application
 server:
   customMiddleware:
-  - name: fiori-tools-proxy
-    afterMiddleware: compression
-    configuration:
-     backend:
-     - path: /sap
-       url: http://rashmir4dsap.rashmigroup.com:8001/
-
+    - name: fiori-tools-proxy
+      afterMiddleware: compression
+      configuration:
+        ignoreCertError: false
+        ui5:
+        path:
+        - /resources
+        - /test-resources
+        url: https://ui5.sap.com
+        backend:
+        - path: /sap
+          url: https://vhomkds4ci.sap.rashmir4psap.rashmigroup.com:44300/
+          client: '300'
+          destination: S4HANA

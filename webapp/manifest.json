@@ -1,5 +1,5 @@
 {
-    "_version": "1.45.0",
+    "_version": "1.18.0",
     "sap.app": {
         "id": "com.rg.sd.sr",
         "type": "application",
@@ -41,7 +41,7 @@
                 "sap.m": {},
                 "sap.ui.layout": {}
             },
-            "minUI5Version": "1.100"
+            "minUI5Version": "1.130"
         },
         "contentDensities": {
             "cozy": true,
@@ -50,14 +50,16 @@
         "rootView": {
             "id": "idRootView",
             "type": "XML",
-            "viewName": "com.rg.sd.sr.view.App"
+            "viewName": "com.rg.sd.sr.view.App",
+            "async": true
         },
         "routing": {
             "config": {
                 "routerClass": "sap.m.routing.Router",
                 "viewPath": "com.rg.sd.sr.view",
                 "viewType": "XML",
-                "controlId": "idAppCon"
+                "controlId": "idAppCon",
+                "async": true
             },
             "routes": [
                 {

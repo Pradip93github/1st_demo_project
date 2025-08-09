@@ -13,7 +13,7 @@ sap.ui.define(['com/rg/sd/sr/controller/BaseController',
                 this.oRouter.getRoute("spiderman").attachMatched(this.harculas,this);
             },
             harculas:function(oEvent){
-                
+                debugger;
               var oIndex = oEvent.getParameter("arguments").fruitId;
               var sPath = '/' + oIndex;
               this.getView().bindElement(sPath,{

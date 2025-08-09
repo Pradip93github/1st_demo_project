@@ -1,7 +1,7 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m"
           xmlns:f="sap.ui.layout.form"  
 		  xmlns:t="sap.ui.table" 
-  controllerName="com.rg.sd.sr.controller.view2">
+  controllerName="com.rg.sd.sr.controller.View2">
   <Page>
        <customHeader>
 			<Toolbar>

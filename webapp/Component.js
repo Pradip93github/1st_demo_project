@@ -8,6 +8,7 @@ sap.ui.define(['sap/ui/core/UIComponent'],
       init: function () {
         //   UIComponent is the base class here we will call base class contractor
         //   super->constructor()------ABAP
+        
         UIComponent.prototype.init.apply(this);
         
         // Router Initialization

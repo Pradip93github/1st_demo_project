@@ -3,5 +3,5 @@
 <!-- for App container control -->
 <!-- <App id="idAppCon"></App> -->
 <!-- for SplitApp container control -->
-<SplitApp id="idAppCon" ></SplitApp>
+<SplitApp id="idAppCon"></SplitApp>
 </mvc:View>

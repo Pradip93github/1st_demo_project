@@ -1,6 +1,6 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m"
           xmlns:t="sap.ui.table" xmlns:f="sap.ui.layout.form"
-  controllerName="com.rg.sd.sr.controller.view1">
+  controllerName="com.rg.sd.sr.controller.View1">
   <Page title="View1">
   		<customHeader>
 			<Toolbar>
